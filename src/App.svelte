@@ -1,4 +1,7 @@
 <script>
+  import samadhan from "/assets/images/samadhan-portal/samadhan.png";
+  import road from "/assets/images/samadhan-portal/road.jpg";
+
   document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
     const track = document.querySelector(".carousel-track");
@@ -63,8 +66,9 @@
           description:
             "A citizen grievance redressal system for Jaipur Development Authority.",
           images: [
-            "assets/images/samadhan-portal/samadhan.png",
-            "assets/images/samadhan-portal/road.jpg",
+            samadhan, road
+            // "/assets/images/samadhan-portal/samadhan.png",
+            // "/assets/images/samadhan-portal/road.jpg",
           ],
         },
         {
