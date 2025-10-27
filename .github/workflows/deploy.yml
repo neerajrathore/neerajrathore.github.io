@@ -1,4 +1,4 @@
-name: Deploy Vite + Svelte to GitHub Pages
+name: Deploy SvelteKit to GitHub Pages
 
 on:
   push:
@@ -28,15 +28,16 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build
+      - name: Build SvelteKit project
         run: npm run build
 
-      - name: Upload dist folder
+      # 👇 Change from dist → build (SvelteKit’s default static adapter output)
+      - name: Upload build folder
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist   # Vite outputs to dist by default
+          path: ./build
 
   deploy:
     environment:
