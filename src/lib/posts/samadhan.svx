@@ -1,0 +1,75 @@
+---
+title: "Samadhan Portal — civic issue reporting made simple"
+date: 2025-10-29
+summary: "A short walkthrough of Samadhan Portal — a citizen-facing issue reporting system that collects public issues across parks, electric poles, roads, sewerage and miscellaneous categories, and routes them to the right authority."
+tags: ["portfolio", "product", "civic-tech", "case-study"]
+---
+
+# Samadhan Portal
+
+> A citizen-first issue reporting system — designed to make it simple for people to report local problems and for authorities to act fast.
+
+I built **Samadhan Portal** to let the public report everyday civic problems in a structured, trackable way. Citizens can create issues with a photo, location, and short description; the system groups each submission into one of several categories and routes it to the responsible authority.
+
+---
+
+## 🧠 Problem We Solved
+
+City residents often notice small but important problems — broken lights, potholes, clogged drains — but lack a simple, consistent way to report them. Reports that do arrive are frequently unstructured, missing location or photos, which makes resolution slow.
+
+Samadhan Portal fixes that by giving users a guided form, enforcing required fields (location, category, photo), and routing issues to the right team.
+
+---
+
+## ⚙️ How It Works
+
+1. User opens the portal (web or mobile).  
+2. Chooses an issue **category** and, if applicable, a subcategory.  
+3. Adds a short description, attaches a photo, and shares the location.  
+4. The issue is accepted, assigned a tracking ID, and routed to the corresponding authority.  
+5. Citizens can track status updates (Open → In Progress → Resolved) and receive notifications.
+
+---
+
+## 🗂️ Categories & Subcategories
+
+### 1️⃣ Parks
+- **Garden** — broken benches, overgrown hedges, damaged play equipment  
+- **Electric** — park lighting not working  
+- **Civil** — damaged pathways, fencing, signage  
+> Anything tied to public parks and playgrounds.
+
+### 2️⃣ Electric Pole
+- **Not working** — streetlight or pole outages, flickering lights, exposed wiring  
+> Focuses on pole & streetlight faults.
+
+### 3️⃣ Road
+- **Pothole** — potholes, surface damage, missing manhole covers  
+> Road issues prioritize safety and rideability.
+
+### 4️⃣ Sewerage
+- **Chock** — clogged drains, overflowing gutters  
+- **Maintenance** — broken covers, recurring backups  
+> Handles drainage and sanitation problems.
+
+### 5️⃣ Miscellaneous
+- **Zone** — zoning-related issues or boundary problems  
+- **Enforcement** — illegal encroachment, unauthorized construction  
+> Catch-all for issues outside other categories.
+
+---
+
+## 🧾 Example Issue (JSON Preview)
+
+```json
+{
+  
+  "category": "Road",
+  "subcategory": "Pothole",
+  "description": "Large pothole near 7th cross causing traffic slowdown.",
+  "location": { "lat": 12.9716, "lng": 77.5946 },
+  "attachments": ["pothole-7thcross.jpg"],
+  "reportedBy": "Anonymous",
+  "status": "Open",
+  "createdAt": "2025-10-28T14:22:00Z"
+}
